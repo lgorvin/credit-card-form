@@ -15,3 +15,9 @@ body {
 .bg2 {
   background-image: url("./assets/bg-card-front.png");
 }
+
+.bgMobile {
+  background-image: url("./assets/bg-main-mobile.png");
+  background-position: center;
+  background-size: cover;
+}
