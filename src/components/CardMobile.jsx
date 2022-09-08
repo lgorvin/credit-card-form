@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createPopper } from "@popperjs/core";
 import cardFront from "../assets/bg-card-front.png";
 import cardBack from "../assets/bg-card-back.png";
 
@@ -58,7 +59,7 @@ const CardMobile = () => {
           onKeyPress={(event) => {
             if (!/[a-z A-Z]/.test(event.key)) {
               event.preventDefault();
-              alert("Only input characters A-Z");
+              alert("Only input letters");
             }
           }}
           placeholder="e.g. Jane Appleseed"
@@ -66,7 +67,7 @@ const CardMobile = () => {
           value={cardname}
           onChange={handleChange2}
           name=""
-          id=""
+          id="inputs"
         />
         <h1 className="pt-5 pb-1 text-black">CARD NUMBER</h1>
         <input
@@ -83,7 +84,7 @@ const CardMobile = () => {
           onChange={handleChange}
           maxLength={16}
           name=""
-          id=""
+          id="inputs"
         />
         <h1 className="pt-5 pb-1 text-black">EXP. DATE (MM/YY)</h1>
         <input
@@ -100,7 +101,7 @@ const CardMobile = () => {
           onChange={handleChange3}
           maxLength={2}
           name=""
-          id=""
+          id="inputs"
         />
         <input
           className="inline border-2 leading-9 ml-2 pl-2 w-20 rounded-md"
@@ -116,7 +117,7 @@ const CardMobile = () => {
           onChange={handleChange4}
           maxLength={2}
           name=""
-          id=""
+          id="inputs"
         />
         <input
           className="absolute border-2 leading-9 ml-[15px] pl-2 w-[148px] rounded-md"
@@ -132,7 +133,7 @@ const CardMobile = () => {
           onChange={handleChange5}
           maxLength={3}
           name=""
-          id=""
+          id="inputs"
         />
         <button
           onClick={handleClick}

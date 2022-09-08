@@ -42,51 +42,81 @@ const Card = () => {
       <div className={!confirm ? "absolute pl-[800px] pt-[220px]" : "hidden"}>
         <h1 className="pb-1 text-black">CARDHOLDER NAME</h1>
         <input
-          className="border-2 leading-9 pl-2 pr-16 rounded-md"
+          className="border-2 leading-9 pl-2 pr-[100px] rounded-md"
+          onKeyPress={(event) => {
+            if (!/[a-z A-Z]/.test(event.key)) {
+              event.preventDefault();
+              alert("Only input letters");
+            }
+          }}
           placeholder="e.g. Jane Appleseed"
           type="text"
           value={cardname}
           onChange={handleChange2}
           name=""
-          id=""
+          id="inputs"
         />
         <h1 className="pt-5 pb-1 text-black">CARD NUMBER</h1>
         <input
-          className="border-2 leading-9 pl-2 pr-16 rounded-md"
+          className="border-2 leading-9 pl-2 pr-[100px] rounded-md"
+          onKeyPress={(event) => {
+            if (!/[0-9]/.test(event.key)) {
+              event.preventDefault();
+              alert("Only input numbers");
+            }
+          }}
           placeholder="e.g. 1234 4567 8912 0000"
           type="text"
           value={cardnum}
           onChange={handleChange}
           name=""
-          id=""
+          id="inputs"
         />
         <h1 className="pt-5 pb-1 text-black">EXP. DATE (MM/YY)</h1>
         <input
           className="inline border-2 leading-9 pl-2 w-20 rounded-md"
+          onKeyPress={(event) => {
+            if (!/[0-9]/.test(event.key)) {
+              event.preventDefault();
+              alert("Only input numbers");
+            }
+          }}
           placeholder="MM"
           type="text"
           value={cardmonth}
           onChange={handleChange3}
           name=""
-          id=""
+          id="inputs"
         />
         <input
           className="inline border-2 leading-9 ml-2 pl-2 w-20 rounded-md"
+          onKeyPress={(event) => {
+            if (!/[0-9]/.test(event.key)) {
+              event.preventDefault();
+              alert("Only input numbers");
+            }
+          }}
           placeholder="YY"
           type="text"
           value={cardyear}
           onChange={handleChange4}
           name=""
-          id=""
+          id="inputs"
         />
         <input
           className="absolute border-2 leading-9 ml-[15px] pl-2 w-24 rounded-md"
+          onKeyPress={(event) => {
+            if (!/[0-9]/.test(event.key)) {
+              event.preventDefault();
+              alert("Only input numbers");
+            }
+          }}
           placeholder="e.g. 123"
           type="text"
           value={cardcvc}
           onChange={handleChange5}
           name=""
-          id=""
+          id="inputs"
         />
         <button
           onClick={handleClick}
