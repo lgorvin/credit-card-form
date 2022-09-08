@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { createPopper } from "@popperjs/core";
 import cardFront from "../assets/bg-card-front.png";
 import cardBack from "../assets/bg-card-back.png";
 
