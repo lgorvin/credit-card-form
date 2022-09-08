@@ -53,6 +53,7 @@ const Card = () => {
           type="text"
           value={cardname}
           onChange={handleChange2}
+          maxLength={30}
           name=""
           id="inputs"
         />
@@ -69,6 +70,7 @@ const Card = () => {
           type="text"
           value={cardnum}
           onChange={handleChange}
+          maxLength={16}
           name=""
           id="inputs"
         />
@@ -85,6 +87,7 @@ const Card = () => {
           type="text"
           value={cardmonth}
           onChange={handleChange3}
+          maxLength={2}
           name=""
           id="inputs"
         />
@@ -100,6 +103,7 @@ const Card = () => {
           type="text"
           value={cardyear}
           onChange={handleChange4}
+          maxLength={2}
           name=""
           id="inputs"
         />
@@ -115,6 +119,7 @@ const Card = () => {
           type="text"
           value={cardcvc}
           onChange={handleChange5}
+          maxLength={3}
           name=""
           id="inputs"
         />
