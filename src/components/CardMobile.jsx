@@ -184,7 +184,12 @@ const CardMobile = () => {
       </div>
 
       <div className="absolute">
-        <h1 className="absolute text-white text-sm pl-[310px] md:pl-[547px] pt-[100px] duration-300">
+        <h1
+          id="cvcHolder"
+          contentEditable={true}
+          data-text="213"
+          className="absolute text-white text-sm pl-[310px] md:pl-[547px] pt-[100px] duration-300"
+        >
           {cardcvc}
         </h1>
         <img
@@ -194,14 +199,40 @@ const CardMobile = () => {
         />
       </div>
       <div className="absolute">
-        <h1 className="absolute text-white text-xl pl-12 md:pl-72 pt-[200px] duration-300">
+        <h1
+          id="cardNumHolder"
+          contentEditable={true}
+          data-text="0000 0000 0000 0000"
+          className="absolute text-white text-xl pl-12 md:pl-72 pt-[200px] duration-300"
+        >
           {cardnum.toString().replace(/\d{4}(?=.)/g, "$& ")}
         </h1>
-        <h1 className="absolute text-white text-md pl-12 md:pl-72 pt-[240px] duration-300">
+        <h1
+          id="cardNameHolder"
+          contentEditable={true}
+          data-text="Jane Appleseed"
+          className="absolute text-white text-md pl-12 md:pl-72 pt-[240px] duration-300"
+        >
           {cardname}
         </h1>
-        <h1 className="absolute text-white text-md pl-60 md:pl-[460px] pt-[240px] duration-300">
-          {cardmonth}/{cardyear}
+        <h1
+          id="cardExpHolder"
+          contentEditable={true}
+          data-text="12"
+          className="absolute text-white text-md pl-[241px] md:pl-[470px] pt-[240px] duration-300"
+        >
+          {cardmonth}
+        </h1>
+        <span className="absolute text-white text-md pl-[261px] md:pl-[490px] pt-[238px]">
+          /
+        </span>
+        <h1
+          id="cardExpHolder2"
+          contentEditable={true}
+          data-text="24"
+          className="absolute text-white text-md pl-[270px] md:pl-[500px] pt-[240px] duration-300"
+        >
+          {cardyear}
         </h1>
         <img
           className="w-72 ml-6 md:ml-64 mt-[120px] duration-300"

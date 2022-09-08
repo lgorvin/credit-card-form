@@ -30,7 +30,30 @@ body {
 }
 
 
+#cardNumHolder:empty:before {
+  content:attr(data-text);
+  color:white
+}
 
+#cardNameHolder:empty:before {
+  content:attr(data-text);
+  color:white
+}
+
+#cardExpHolder:empty:before {
+  content:attr(data-text);
+  color:white
+}
+
+#cardExpHolder2:empty:before {
+  content:attr(data-text);
+  color:white
+}
+
+#cvcHolder:empty:before {
+  content:attr(data-text);
+  color:white
+}
 
 
 

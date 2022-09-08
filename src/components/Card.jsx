@@ -168,20 +168,51 @@ const Card = () => {
         </div>
       </div>
       <div className="absolute">
-        <h1 className="absolute text-white text-2xl pl-40 pt-72">
+        <h1
+          id="cardNumHolder"
+          contentEditable={true}
+          data-text="0000 0000 0000 0000"
+          className="absolute text-white text-2xl pl-40 pt-72"
+        >
           {cardnum.toString().replace(/\d{4}(?=.)/g, "$& ")}
         </h1>
-        <h1 className="absolute text-white text-lg pl-40 pt-[340px]">
+        <h1
+          id="cardNameHolder"
+          contentEditable={true}
+          data-text="Jane Appleseed"
+          className="absolute text-white text-lg pl-40 pt-[340px]"
+        >
           {cardname}
         </h1>
-        <h1 className="absolute text-white text-lg pl-[500px] pt-[340px]">
-          {cardmonth}/{cardyear}
+        <h1
+          id="cardExpHolder"
+          contentEditable={true}
+          data-text="12"
+          className="absolute text-white text-md pl-[480px] pt-[340px] duration-300"
+        >
+          {cardmonth}
+        </h1>
+        <span className="absolute text-white text-md pl-[500px] pt-[338px]">
+          /
+        </span>
+        <h1
+          id="cardExpHolder2"
+          contentEditable={true}
+          data-text="24"
+          className="absolute text-white text-md pl-[510px] pt-[340px] duration-300"
+        >
+          {cardyear}
         </h1>
         <img className="w-[100%] pt-36 pl-32" src={cardFront} alt="" />
       </div>
 
       <div className="absolute">
-        <h1 className="absolute text-white text-md pl-[580px] pt-[527px]">
+        <h1
+          id="cvcHolder"
+          contentEditable={true}
+          data-text="213"
+          className="absolute text-white text-md pl-[580px] pt-[527px]"
+        >
           {cardcvc}
         </h1>
         <img className="w-[100%] pt-[420px] pl-56" src={cardBack} alt="" />
