@@ -163,7 +163,9 @@ const Card = () => {
         </div>
       </div>
       <div className="absolute">
-        <h1 className="absolute text-white text-2xl pl-40 pt-72">{cardnum}</h1>
+        <h1 className="absolute text-white text-2xl pl-40 pt-72">
+          {cardnum.toString().replace(/\d{4}(?=.)/g, "$& ")}
+        </h1>
         <h1 className="absolute text-white text-lg pl-40 pt-[340px]">
           {cardname}
         </h1>
