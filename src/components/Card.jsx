@@ -201,7 +201,7 @@ const Card = () => {
           />
         </svg>
       </div>
-      <div className="bg1 h-full w-[30%]"></div>
+      <div className="bg1 h-full w-[450px]"></div>
     </div>
   );
 };
